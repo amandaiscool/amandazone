@@ -1,0 +1,9 @@
+body {background-color: cyan}
+/*color refers to text colof, not the background*/
+p {
+    color:chartreuse;
+    background-color: darkorchid;
+}
+h2 {
+  border: 80px dotted blue;
+}
