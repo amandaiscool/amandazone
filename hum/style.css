@@ -1,0 +1,15 @@
+marquee {
+  font-size: 14px;
+  color: blue;
+}
+
+h1 {
+  color: #0073e6;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+body {
+  background-color: aliceblue;
+}
