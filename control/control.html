@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title> ⋆˙⟡♡ </title>
+    <style>
+        
+        body {
+            background-color: lightpink;
+            color: white;
+            font-family: cursive, sans-serif;
+            text-align: center;
+            animation: sparkle 5s infinite alternate;
+        }
+        @keyframes sparkle {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        h1 {
+            font-size: 32px;
+            text-shadow: 2px 2px hotpink;
+        }
+        h2 {
+            font-size: 24px;
+            text-shadow: 2px 2px hotpink;
+        }
+        p {
+            font-size: 24px;
+            text-shadow: 2px 2px hotpink;
+        }
+        button {
+            background-color: hotpink;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 24px;
+            text-shadow: 2px 2px hotpink
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px rgba(255, 105, 180, 0.6);
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #catImage {
+            display: none;
+            margin-top: 20px;
+            max-width: 500px;
+            width: 80%;
+            border-radius: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <h1>˖⁺‧₊˚ ♡ ˚₊‧⁺˖</h1>
+    <h2>CLICK</h2>
+    <p>⋆˚✿˖°</p>
+    <button onclick="changeBackground()">˖⁺‧₊˚ ♡ ˚₊‧⁺˖</button>
+    <button onclick="changeText()">⋆ ˚｡⋆ ♡ ˚</button>
+    <button onclick="revealCat()">⊹ ࣪ ˖♡ ˖ ࣪⊹ </button>
+    
+    <img id="catImage" src="https://babyberm.com/cdn/shop/products/95af14e2-c144-4eea-b29d-435060f9e70b_900x_db5c1cac-e3da-4e25-b58f-376f9474cf34_800x-removebg-preview.png?v=1680096368" alt="Cute Pink Cat">
+
+    <script>
+        let colors = ['pink', 'lightblue', 'lavender', 'peachpuff', 'mistyrose'];
+        let texts = [
+            "˗ˏˋ ♡ ˎˊ˗", 
+            "₊✩‧₊˚౨ৎ˚₊✩‧₊", 
+            "✧˖°.⊹ ࣪ ˖", 
+            "⋆𐙚₊˚⊹♡"
+        ];
+        let colorIndex = 0;
+        let textIndex = 0;
+        
+        let catImages = [
+            "https://file.aiquickdraw.com/imgcompressed/img/compressed_4240a89ec5153fc37c48fadab5300561.webp",
+            "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea460548-110a-484c-a9ae-528d61189198/dgyea56-4a9ad174-f17b-4312-804a-93ef9fbc928a.png/v1/fill/w_858,h_932/spunky_dog_plush_png_by_collegeman1998_dgyea56-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2VhNDYwNTQ4LTExMGEtNDg0Yy1hOWFlLTUyOGQ2MTE4OTE5OFwvZGd5ZWE1Ni00YTlhZDE3NC1mMTdiLTQzMTItODA0YS05M2VmOWZiYzkyOGEucG5nIiwid2lkdGgiOiI8PTk0MyJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8vx-ckamvTwmDno04-ABYHnRm9saS-lTr_P40S5Vxvw",
+            "https://sc01.alicdn.com/kf/HTB1lzJqaPbguuRkHFrd762.LFXaI/232052693/HTB1lzJqaPbguuRkHFrd762.LFXaI.png",
+            "https://cdn.shopify.com/s/files/1/1313/1057/products/jellycat-bashful-grey-bunny-medium-12inch_1.png?v=1472042017"
+        ];
+
+        function changeBackground() {
+            colorIndex = (colorIndex + 1) % colors.length;
+            document.body.style.background = colors[colorIndex];
+        }
+
+        function changeText() {
+            textIndex = (textIndex + 1) % texts.length;
+            document.querySelector('p').innerText = texts[textIndex];
+        }
+
+        function revealCat() {
+            let catImage = document.getElementById("catImage");
+            let randomCat = catImages[Math.floor(Math.random() * catImages.length)];
+            catImage.src = randomCat;
+            catImage.style.display = "block";
+        }
+    </script>
+</body>
+</html>

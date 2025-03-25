@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moving Cat</title>
+    <style>
+        body {
+            background-color: #ffe0de;
+            font-family: monospace;
+            color: red;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .cat {
+            position: absolute;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cat">
+<pre>
+      /\_/\  
+     ( o.o )  ♥
+     (  "  "  )～☆
+</pre>
+</div>
+
+<script>
+    setInterval(function() {
+        var cat = document.querySelector(".cat");
+
+        var maxX = window.innerWidth - cat.offsetWidth;
+        var maxY = window.innerHeight - cat.offsetHeight;
+
+        cat.style.left = Math.random() * maxX + "px";
+        cat.style.top = Math.random() * maxY + "px";
+    }, 2000);
+</script>
+
+</body>
+</html>
