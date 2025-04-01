@@ -1,18 +1,24 @@
- $(".dark-btn").click(function(){
-        $("body").toggleClass("dark");
+$(".dark-btn").click(
+    function(){
         $(".square").toggleClass("dark");
+        $("body").toggleClass("dark");
     }
 );
 
-
-$(".spin-btn").click(function(){
-    $(".square").toggleClass("spin");
-}
+$(".spin-btn").click(
+    function(){
+        $(".square").toggleClass("spin");
+    }
 );
 
-
-$(".reveal-btn").click(function(){
-    $(".thing").addClass("reveal");
-    $(".reveal-btn").hide();
-}
+$(".reveal-btn").click(
+    function(){
+        $(".chair").addClass("reveal");
+        $(".reveal-btn").hide();
+    }
 );
+
+$(".draggable").draggable({
+    containment: ".container",
+    snap: true
+});
